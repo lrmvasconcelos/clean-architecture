@@ -8,7 +8,7 @@ interface ProjectsDataStore {
 
     fun getProjects(): Observable<List<ProjectEntity>>
 
-    fun saveProjetc(projects: List<ProjectEntity>) : Completable
+    fun saveProjects(projects: List<ProjectEntity>) : Completable
 
     fun clearProjects(): Completable
 

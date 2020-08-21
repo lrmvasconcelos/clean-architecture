@@ -14,7 +14,7 @@ class ProjetsRemoteDataStore @Inject constructor(
         return projectRemote.getProjects()
     }
 
-    override fun saveProjetc(projects: List<ProjectEntity>): Completable {
+    override fun saveProjects(projects: List<ProjectEntity>): Completable {
         throw UnsupportedOperationException("Not supported")
     }
 

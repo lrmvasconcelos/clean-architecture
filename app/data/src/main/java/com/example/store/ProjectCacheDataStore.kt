@@ -15,7 +15,7 @@ class ProjectCacheDataStore @Inject constructor(
         return projectsCache.getProjects()
     }
 
-    override fun saveProjetc(projects: List<ProjectEntity>): Completable {
+    override fun saveProjects(projects: List<ProjectEntity>): Completable {
         return projectsCache.saveProjects(projects)
             .andThen(projectsCache.setLastCacheTime(System.currentTimeMillis()))
     }
