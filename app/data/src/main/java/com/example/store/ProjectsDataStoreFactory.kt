@@ -5,22 +5,22 @@ import javax.inject.Inject
 
 
 open class ProjectsDataStoreFactory @Inject constructor(
-    private val projectCacheDataStore: ProjectCacheDataStore,
-    private val projetsRemoteDataStore: ProjetsRemoteDataStore
+    private val projectsCacheDataStore: ProjectsCacheDataStore,
+    private val projectsRemoteDataStore: ProjectsRemoteDataStore
 ) {
     open fun getDataStore(
         projectCached: Boolean,
         cacheExpired: Boolean
     ): ProjectsDataStore {
         return if (projectCached && !cacheExpired) {
-            projectCacheDataStore
+            projectsCacheDataStore
         } else {
-            projetsRemoteDataStore
+            projectsRemoteDataStore
         }
     }
 
     open fun getCacheDataStore(): ProjectsDataStore {
-        return projectCacheDataStore
+        return projectsCacheDataStore
     }
 
 }

@@ -10,7 +10,7 @@ class ProjectMapper @Inject constructor() : EntityMapper<ProjectEntity, Project>
         return Project(
             entity.id, entity.name, entity.fullName,
             entity.starCount, entity.dateCreated, entity.ownerName,
-            entity.ownerAvatar, entity.isBookMaked
+            entity.ownerAvatar, entity.isBookMarked
         )
     }
 
