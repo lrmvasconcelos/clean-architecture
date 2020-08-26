@@ -1,3 +1,4 @@
+include ':cache'
 include ':remote'
 include ':app', ':domain', ':data'
 rootProject.name='Clean Arch'
