@@ -1,0 +1,36 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+
+    //Libraries
+    def supportLibraryVersion = '26.1.0'
+    def javaxAnnotationVersion = '1.0'
+    def javaxInjectVersion = '1'
+    def rxJavaVersion = '2.0.2'
+    def rxKotlinVersion = '2.1.0'
+    def androidAnnotationsVersion = '21.0.3'
+    def daggerVersion = '2.11'
+    def gsonVersion = '2.8.1'
+    def okHttpVersion = '3.8.1'
+    def retrofitVersion = '2.3.0'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(':data')
+
+    implementation "com.google.code.gson:gson:${gsonVersion}"
+    implementation "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}"
+    implementation "javax.annotation:jsr250-api:${javaxAnnotationVersion}"
+    implementation "javax.inject:javax.inject:${javaxInjectVersion}"
+    implementation "com.android.support:support-annotations:${androidAnnotationsVersion}"
+    implementation "com.squareup.okhttp3:okhttp:${okHttpVersion}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"
+    implementation "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    implementation "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
